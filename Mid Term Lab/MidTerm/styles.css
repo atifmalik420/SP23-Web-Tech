@@ -43,3 +43,11 @@ i{
     width:40rem;
     height: 30rem;
 }
+.cat-img{
+    max-width: 100%;
+    width:20rem;
+    height: 16rem;
+}
+.ctd{
+    padding-top: 4rem;
+}
