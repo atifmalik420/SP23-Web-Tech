@@ -1,12 +1,22 @@
 .navbar{
-    height: 6rem;
+    height: 3rem;
     background-color: white;
+}
+i{
+    padding: 1rem;
+    padding-top: 2.5rem;
+    font-size: 1.5rem;
+}
+.logo{
+    max-width: 100%;
+    padding: 1rem;
+    padding-bottom: 0rem;
 }
 #image-container {
     position: relative;
     height: 500px;
-  }
-  #image-container img {
+}
+#image-container img {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,8 +25,21 @@
     object-fit: cover;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
-  }
-  #image-container .active {
+}
+#image-container .active {
     opacity: 1;
-  }
-  
+}
+.feat{
+    padding: 3rem;
+    padding-bottom: 1rem;
+} 
+.featured-text{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family:Arial, Helvetica, sans-serif;
+}
+.promo-img{
+    max-width: 100%;
+    width:40rem;
+    height: 30rem;
+}
