@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
 router.post("/new", async (req, res) => {
   let mediaObj = req.body;
   let media = new Media(mediaObj);
-  console.log(mediaObj);
   await media.save();
   res.redirect("/");
 });
