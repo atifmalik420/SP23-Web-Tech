@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css'>
+  </head>
+  <body>
+    
+    <div class="container">
+      <a class="btn btn-secondary m-3" href="/new">Add New</a>
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-4">
+          <% for (let index = 0; index < medias.length; index++) { %>
+            <div class="col">
+              <div class="card">
+                <div class="card-header">
+                    <h5>File Name: <%= medias[index].filename %></h5>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">File Type: <%= medias[index].filetype %></h5>
+                  <h5 class="card-title">Extension: <%= medias[index].extension %></h5>
+                  <h5 class="card-title">Size: <%= medias[index].size %></h5>
+                  <form action="/medias/<%= medias[index]._id %>?_method=DELETE" method="POST" style="display: inline;">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        
+      </div>
+<!--       
+      <a class="btn btn-primary mt-3" href="/books">Display Records</a> -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
