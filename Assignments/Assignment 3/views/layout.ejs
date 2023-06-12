@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/jpg" href="preview.jpg">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>GM Estate</title>
+</head>
+<body>
+  <div class="container-fluid col-12" style="padding-left: 0;padding-right: 0;margin-right: 0">
+  <div class="nav-div col-12">
+    <section class="nav-sec">
+      <nav class="navbar navbar-expand-lg navbar-light navbar-transparent" >
+        <div class="container-fluid row">
+            <div class="col-3">
+            <a class="navbar-brand" href="/"><img src="preview.jpg" alt="logo"></a></div>
+          <div class="collapse navbar-collapse col-9" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav nav-tabs">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/">Home</a>
+              </li>
+              
+              <% if (user) { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/buy">Buy</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/sell">Sell</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/rent">Rent</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/news">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/contact">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/logout">Logout <%= user.name %> </a>
+                </li>
+              <% } else { %>
+                <li class="nav-item">
+                  <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/register">Register</a>
+                </li>
+                 
+              <% } %>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+  </div>
+  <%-body %>
+  <div class="footer-div">
+    <section class="footer-sec">
+        <div class="container-fluid bg-dark" style="color:white">
+            <div class="row justify-content-center p-5">
+                <div class="col-5">
+                    <p>Our main focus is the customer journey in day-to-day management and our services are tailored to each client. We dedicate our special attention to unique needs and requirements to help hundreds of clients realize their homeownership goals, business setup, and return on investments.</p>
+                </div>
+                <div class="col-3">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis eligendi vitae ut quidem corporis reprehenderit iste dignissimos dolores temporibus harum, amet esse suscipit maxime praesentium laudantium omnis saepe alias!</p>
+                </div>
+                <div class="col-3">
+                    <div class="row justify-content-center">
+                        <h4>Follow us</h4>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="">FaceBook</a>
+                    </div>
+                    <div class="row justify-content-center">
+                        <a href="">Twitter</a>
+                    </div>
+                    <div class="row">
+                        <a href="">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-5">
+                <div class="">
+                    <h4>&copy; GM Real Estate Consultants. All rights reserved.</h4>
+                </div>
+            </div>
+
+        </div>
+    </section>
+  </div>
+</div>
+</body>
+</html>
